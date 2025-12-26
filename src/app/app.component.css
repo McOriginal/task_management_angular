@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.sidebar_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.tasks_box {
+  width: 70%;
+  padding: 20px;
+}
+
+.no-user-selected {
+  color: white;
+  font-size: 24px;
+  text-decoration: underline #a412a9;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

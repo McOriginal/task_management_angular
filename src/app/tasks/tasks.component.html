@@ -1,0 +1,25 @@
+@if(isOpenModal){
+<!-- New Task -->
+<app-new-task [userId]="userId" (closeModal)="onTaskClose()"></app-new-task>
+
+}
+
+<div class="tasks">
+  <header>
+    <h3>
+      <span>{{ name }}</span> 's Tasks
+    </h3>
+
+    <button class="add_btn" (click)="onOpenModal()">Add Task</button>
+  </header>
+
+  @if(userTasks.length > 0){
+  <div class="task_box">
+    @for(item of userTasks; track item.id){
+    <app-task [task]="item"></app-task>
+    }
+  </div>
+  } @else {
+  <p class="no-tasks-message">No tasks available for this user.</p>
+  }
+</div>

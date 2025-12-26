@@ -1,0 +1,36 @@
+<div class="back_drop" (click)="onCloseNewTaskModal()"></div>
+
+<div class="form_modal">
+  <form (ngSubmit)="onAddNewTask()">
+    <h2>New Task</h2>
+    <label for="taskTitle">Title</label>
+    <input
+      type="text"
+      id="taskTitle"
+      name="taskTitle"
+      [(ngModel)]="entredTitle"
+    />
+
+    <label for="taskDescription">Description</label>
+    <textarea
+      id="taskDescription"
+      name="taskDescription"
+      [(ngModel)]="entredDescription"
+    ></textarea>
+
+    <label for="taskDueDate">Due Date</label>
+    <input
+      type="date"
+      id="taskDueDate"
+      name="taskDueDate"
+      [(ngModel)]="entredDueDate"
+    />
+
+    <div class="form_buttons">
+      <button type="submit" class="add_btn">Add Task</button>
+      <button type="button" class="cancel_btn" (click)="onCloseNewTaskModal()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
